@@ -5,6 +5,8 @@ import Home from "./pages/Home";
 import New from "./pages/New";
 import Diary from "./pages/Diary";
 import Edit from "./pages/Edit";
+import Header from "./include/Header";
+import Footer from "./include/Footer";
 
 const mockData = [
   {
@@ -110,12 +112,18 @@ function App() {
           }}
         >
           <div className="App">
+
+            <Header /> 
+
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/new" element={<New />} />
               <Route path="/diary/:id" element={<Diary />} />
               <Route path="/edit/:id" element={<Edit />} />
             </Routes>
+            
+            <Footer /> 
+
           </div>
         </DiaryDispatchContext.Provider>
       </DiaryStateContext.Provider>
